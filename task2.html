@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taks 2 DOM</title>
+</head>
+<body>
+    <h1>I`am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+
+    <a href="/index.html" style="display:block;">Go to task 1</a>
+    <a href="/task3.html">Go to task 3</a>
+
+    <script>
+    let h1Elements = document.querySelector("h1");
+    let listElement = document.querySelector("#myList");
+    let spanElement = document.querySelector("span");
+
+    h1Elements.style.background = "#6B8E23";
+
+    let lists = document.querySelector("#myDiv");
+    lists.innerHTML = (`<p><strong>Sirst paragraph</strong></p>
+        <p style="color:red;">Second paragraph</p>
+        <p><u>Third paragraph</u></p>
+        <p><i>Fourth paragraph</i></p>`);
+
+    listElement.style.listStyle = "none";
+    listElement.style.display = "flex";
+    spanElement.style.visibility = "hidden";
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3DOM</title>
+</head>
+<body>
+    <button>Live button</button>
+    <p></p>
+    <br><br>
+    <a href="/index.html" style="display:block;">Go to task 1</a>
+    <a href="/task2.html" style="display:block;">Go to task 2</a>
+    <a href="/" style="display:block;">Go to task 4</a>
+    <script>
+        let button = document.querySelector('button');
+        let p = document.querySelector('p');
+        
+        button.addEventListener('click', buttonClick);
+        button.addEventListener('mouseleave', mouseupq);
+        button.addEventListener('mouseenter', mouseenter);
+
+
+        function buttonClick() {
+            p.innerHTML = (`<p>I was pressed</p>`);
+        }
+        function mouseupq() {
+            p.innerHTML = (`<p>Mouse is not on me!</p>`);
+        }
+        function mouseenter(){
+            p.innerHTML = (`<p>Mouse on me</p>`);
+        }
+    </script>
+</body>
+</html>
